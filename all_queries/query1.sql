@@ -1,15 +1,14 @@
+/*----------------Create tables--------------------*/
+-- sales table
 CREATE TABLE sales (
-    purchase_number INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    purchase_number INT NOT NULL AUTO_INCREMENT,
     date_of_purchase DATE,
     customer_id INT,
-    item_code VARCHAR(10)
+    item_code VARCHAR(10),
+    PRIMARY KEY (purchase_number)
 );
 
-SELECT 
-    *
-FROM
-    sales.sales;
-    
+-- customers table
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     first_name VARCHAR(255),
@@ -18,9 +17,32 @@ CREATE TABLE customers (
     number_of_complaints INT
 );
 
-DROP TABLE customers;
+-- items table
+CREATE TABLE items (
+    item_code VARCHAR(10) NOT NULL,
+    item VARCHAR(255),
+    unit_price NUMERIC(10 , 2 ),
+    company_id VARCHAR(255),
+    PRIMARY KEY (item_code)
+);
 
-SELECT 
-    *
-FROM
-    sales.customers;
+-- companies table
+CREATE TABLE companies (
+    company_id VARCHAR(255) NOT NULL,
+    company_name VARCHAR(255),
+    headquaters_phone_number NUMERIC(12),
+    PRIMARY KEY (company_id)
+);
+
+
+/*--------------Select from tables---------------*/
+SELECT * FROM sales.sales;
+SELECT * FROM sales.customers;    
+SELECT * FROM sales.items;
+SELECT * FROM sales.companies;
+
+/*----------------Drop tables--------------------*/
+DROP TABLE customers;
+DROP TABLE sales;
+DROP TABLE items;
+DROP TABLE companies;
