@@ -15,11 +15,12 @@ CREATE TABLE sales (
 -- customers table
 DROP TABLE IF EXISTS customers;
 CREATE TABLE customers (
-    customer_id INT PRIMARY KEY,
+    customer_id INT NOT NULL,
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     email_address VARCHAR(255),
-    number_of_complaints INT
+    number_of_complaints INT,
+    PRIMARY KEY(customer_id)
 );
 
 -- items table
@@ -41,13 +42,6 @@ CREATE TABLE companies (
     PRIMARY KEY (company_id)
 );
 
-
-/*--------------Select from tables---------------*/
-SELECT * FROM sales.sales;
-SELECT * FROM sales.customers;    
-SELECT * FROM sales.items;
-SELECT * FROM sales.companies;
-
 /*--------------Alter tables---------------*/
 ALTER TABLE sales 
 ADD FOREIGN KEY(item_code) REFERENCES items(item_code);
@@ -57,3 +51,9 @@ ADD FOREIGN KEY(company_id) REFERENCES companies(company_id);
 
 ALTER TABLE customers
 ADD UNIQUE KEY(email_address);
+
+ALTER TABLE customers
+DROP INDEX email_address;
+
+ALTER TABLE customers
+ADD COLUMN gender ENUM ('M','F') AFTER last_name;
