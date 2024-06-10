@@ -1,14 +1,19 @@
 /*----------------Create tables--------------------*/
 -- sales table
+DROP TABLE IF EXISTS sales;
 CREATE TABLE sales (
     purchase_number INT NOT NULL AUTO_INCREMENT,
     date_of_purchase DATE,
     customer_id INT,
     item_code VARCHAR(10),
-    PRIMARY KEY (purchase_number)
+    PRIMARY KEY (purchase_number),
+    FOREIGN KEY (customer_id)
+        REFERENCES customers (customer_id)
+        ON DELETE CASCADE
 );
 
 -- customers table
+DROP TABLE IF EXISTS customers;
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     first_name VARCHAR(255),
@@ -18,6 +23,7 @@ CREATE TABLE customers (
 );
 
 -- items table
+DROP TABLE IF EXISTS items;
 CREATE TABLE items (
     item_code VARCHAR(10) NOT NULL,
     item VARCHAR(255),
@@ -27,6 +33,7 @@ CREATE TABLE items (
 );
 
 -- companies table
+DROP TABLE IF EXISTS companies;
 CREATE TABLE companies (
     company_id VARCHAR(255) NOT NULL,
     company_name VARCHAR(255),
@@ -41,8 +48,9 @@ SELECT * FROM sales.customers;
 SELECT * FROM sales.items;
 SELECT * FROM sales.companies;
 
-/*----------------Drop tables--------------------*/
-DROP TABLE customers;
-DROP TABLE sales;
-DROP TABLE items;
-DROP TABLE companies;
+/*--------------Alter tables---------------*/
+ALTER TABLE sales 
+ADD FOREIGN KEY(item_code) REFERENCES items(item_code);
+
+ALTER TABLE items
+ADD FOREIGN KEY(company_id) REFERENCES companies(company_id);
