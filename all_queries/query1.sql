@@ -54,3 +54,6 @@ ADD FOREIGN KEY(item_code) REFERENCES items(item_code);
 
 ALTER TABLE items
 ADD FOREIGN KEY(company_id) REFERENCES companies(company_id);
+
+ALTER TABLE customers
+ADD UNIQUE KEY(email_address);
