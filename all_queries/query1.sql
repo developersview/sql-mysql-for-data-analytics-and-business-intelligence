@@ -67,3 +67,9 @@ CHANGE COLUMN number_of_complaints number_of_complaints INT;
 ALTER TABLE companies
 CHANGE COLUMN company_name company_name VARCHAR(255) DEFAULT 'X',
 CHANGE COLUMN headquaters_phone_number headquaters_phone_number NUMERIC(12) DEFAULT 0;
+
+ALTER TABLE companies
+MODIFY headquaters_phone_number VARCHAR(255) NULL;
+
+ALTER TABLE companies
+CHANGE COLUMN headquaters_phone_number headquaters_phone_number VARCHAR(255) NOT NULL;
