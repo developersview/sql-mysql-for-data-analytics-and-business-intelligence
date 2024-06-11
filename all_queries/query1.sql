@@ -15,7 +15,7 @@ CREATE TABLE sales (
 -- customers table
 DROP TABLE IF EXISTS customers;
 CREATE TABLE customers (
-    customer_id INT NOT NULL,
+    customer_id INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     email_address VARCHAR(255),
@@ -57,3 +57,13 @@ DROP INDEX email_address;
 
 ALTER TABLE customers
 ADD COLUMN gender ENUM ('M','F') AFTER last_name;
+
+ALTER TABLE customers
+CHANGE COLUMN number_of_complaints number_of_complaints INT DEFAULT 0;
+
+ALTER TABLE customers
+CHANGE COLUMN number_of_complaints number_of_complaints INT;
+
+ALTER TABLE companies
+CHANGE COLUMN company_name company_name VARCHAR(255) DEFAULT 'X',
+CHANGE COLUMN headquaters_phone_number headquaters_phone_number NUMERIC(12) DEFAULT 0;
