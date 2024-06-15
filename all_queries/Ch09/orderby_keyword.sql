@@ -10,3 +10,10 @@ SELECT
 FROM
     employees e
 ORDER BY emp_no DESC;
+
+
+SELECT 
+    *
+FROM
+    employees
+ORDER BY hire_date DESC;
