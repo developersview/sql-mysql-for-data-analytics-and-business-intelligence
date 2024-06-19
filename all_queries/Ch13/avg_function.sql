@@ -1,12 +1,12 @@
 SELECT 
-    AVG(salary)
+    AVG(salary) as avg_salary
 FROM
     salaries;
 
 
     
 SELECT 
-    AVG(salary)
+    AVG(salary) as avg_salary
 FROM
     salaries
 WHERE
