@@ -3,6 +3,15 @@ SELECT
 FROM
     department_dup
 ORDER BY dept_no DESC;
+
+INSERT INTO department_dup 
+(
+	dept_no, 
+	dept_name
+) SELECT 
+    *
+FROM
+    departments;
     
 DELETE FROM department_dup 
 WHERE
