@@ -18,3 +18,13 @@ INSERT INTO departments_dup2
     *
 FROM
     departments;
+    
+INSERT INTO departments_dup2 (dept_name)
+VALUES ('Public Relations');
+
+INSERT INTO departments_dup2 (dept_no)
+VALUES ('d010'),('d011');
+
+DELETE FROM departments_dup2 
+WHERE
+    dept_no = 'd002';
