@@ -20,3 +20,12 @@ SELECT
 FROM
     departments_dup2
 ORDER BY dept_no ASC;
+
+-- remove the duplicates
+DELETE FROM dept_manager_dup 
+WHERE
+    emp_no = '110228';
+
+DELETE FROM departments_dup2 
+WHERE
+    dept_no = 'd009';
