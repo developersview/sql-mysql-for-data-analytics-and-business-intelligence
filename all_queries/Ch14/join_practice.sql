@@ -12,3 +12,10 @@ HAVING avg_salary_per_dept > 60000
 ORDER BY avg_salary_per_dept DESC;
 
 -- exercise
+SELECT 
+    em.gender AS gender, COUNT(dm.emp_no) AS count
+FROM
+    employees em
+        INNER JOIN
+    dept_manager dm ON em.emp_no = dm.emp_no
+GROUP BY gender;
