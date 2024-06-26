@@ -8,6 +8,7 @@ FROM
         INNER JOIN
     salaries sl ON dm.emp_no = sl.emp_no
 GROUP BY dp.dept_name
+HAVING avg_salary_per_dept > 60000
 ORDER BY avg_salary_per_dept DESC;
 
 -- exercise
