@@ -7,6 +7,7 @@ FROM
     dept_manager dm ON dp.dept_no = dm.dept_no
         INNER JOIN
     salaries sl ON dm.emp_no = sl.emp_no
-GROUP BY dp.dept_name;
+GROUP BY dp.dept_name
+ORDER BY avg_salary_per_dept DESC;
 
 -- exercise
