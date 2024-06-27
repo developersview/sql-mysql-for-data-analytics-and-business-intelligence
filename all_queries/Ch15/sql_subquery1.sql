@@ -3,7 +3,7 @@ SELECT * from dept_manager;
 /* select the first and last name from the employees table for the same 
  employee numbers that can be found in dept_manager table */
  
- SELECT 
+SELECT 
     e.emp_no, e.first_name, e.last_name
 FROM
     employees e
