@@ -4,7 +4,7 @@ SELECT * from dept_manager;
  employee numbers that can be found in dept_manager table */
  
  SELECT 
-    e.first_name, e.last_name
+    e.emp_no, e.first_name, e.last_name
 FROM
     employees e
 WHERE
