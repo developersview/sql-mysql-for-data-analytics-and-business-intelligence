@@ -12,3 +12,17 @@ WHERE
             dm.emp_no
         FROM
             dept_manager dm);
+            
+            
+-- excercise
+SELECT 
+    *
+FROM
+    dept_manager dm
+WHERE
+    dm.emp_no IN (SELECT 
+            e.emp_no
+        FROM
+            employees e
+        WHERE
+            e.hire_date BETWEEN '1990-01-01' AND '1995-01-01');
