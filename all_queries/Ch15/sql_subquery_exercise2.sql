@@ -87,5 +87,10 @@ FROM
     ORDER BY e.emp_no
     LIMIT 20) AS D) AS U;
     
-    
+-- fetch value from emp_manager table
+SELECT 
+    *
+FROM
+    emp_manager
+ORDER BY emp_no;    
     
