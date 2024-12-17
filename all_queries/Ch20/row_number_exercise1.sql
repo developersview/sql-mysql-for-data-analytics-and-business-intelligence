@@ -11,3 +11,10 @@ SELECT
     ROW_NUMBER() OVER(PARTITION BY first_name ORDER BY last_name) AS row_num
 FROM
     employees;  
+    
+
+SELECT 
+    emp_no, first_name, last_name,
+    ROW_NUMBER() OVER(PARTITION BY last_name ORDER BY emp_no) AS row_num
+FROM
+    employees; 
