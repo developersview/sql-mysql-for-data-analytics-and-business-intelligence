@@ -1,0 +1,612 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='Task1_exercise' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='task1_exercise1' inline='true' name='federated.06738a61m5cm9316n2g2r1bszqk2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='task1_exercise1' name='textscan.1gjddgr0n6xdl414ki44f1ybteou'>
+            <connection class='textscan' directory='D:/_DA+DS/02_SQL/sql-mysql-for-data-analytics-and-business-intelligence/all_queries/Ch23' filename='task1_exercise1.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1gjddgr0n6xdl414ki44f1ybteou' name='task1_exercise1.csv' table='[task1_exercise1#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='jan_1_1998' ordinal='0' />
+            <column datatype='string' name='gender' ordinal='1' />
+            <column datatype='integer' name='num_of_employees' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[task1_exercise1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>jan_1_1998</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[jan_1_1998]</local-name>
+            <parent-name>[task1_exercise1.csv]</parent-name>
+            <remote-alias>jan_1_1998</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[task1_exercise1.csv_8045C6E0C1254A30BDC2412EECC7EAE0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[task1_exercise1.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[task1_exercise1.csv_8045C6E0C1254A30BDC2412EECC7EAE0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_of_employees</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_of_employees]</local-name>
+            <parent-name>[task1_exercise1.csv]</parent-name>
+            <remote-alias>num_of_employees</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[task1_exercise1.csv_8045C6E0C1254A30BDC2412EECC7EAE0]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='task1_exercise1.csv' datatype='table' name='[__tableau_internal_object_id__].[task1_exercise1.csv_8045C6E0C1254A30BDC2412EECC7EAE0]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Jan 1 1998' datatype='string' name='[jan_1_1998]' role='dimension' type='nominal' />
+      <column caption='Num Of Employees' datatype='integer' name='[num_of_employees]' role='measure' type='quantitative' />
+      <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+      <column-instance column='[jan_1_1998]' derivation='None' name='[none:jan_1_1998:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/pcslg/AppData/Local/Temp/TableauTemp/#TableauTemp_1klrc5a17lsst915icl0n1ewlbvf.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/02/2025 03:52:32 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>jan_1_1998</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[jan_1_1998]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>jan_1_1998</remote-alias>
+              <ordinal>0</ordinal>
+              <family>task1_exercise1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[task1_exercise1.csv_8045C6E0C1254A30BDC2412EECC7EAE0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>1</ordinal>
+              <family>task1_exercise1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[task1_exercise1.csv_8045C6E0C1254A30BDC2412EECC7EAE0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_of_employees</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_of_employees]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_of_employees</remote-alias>
+              <ordinal>2</ordinal>
+              <family>task1_exercise1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[task1_exercise1.csv_8045C6E0C1254A30BDC2412EECC7EAE0]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:gender:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;M&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;F&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:jan_1_1998:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;on or after&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;before&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='task1_exercise1.csv' id='task1_exercise1.csv_8045C6E0C1254A30BDC2412EECC7EAE0'>
+            <properties context=''>
+              <relation connection='textscan.1gjddgr0n6xdl414ki44f1ybteou' name='task1_exercise1.csv' table='[task1_exercise1#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='jan_1_1998' ordinal='0' />
+                  <column datatype='string' name='gender' ordinal='1' />
+                  <column datatype='integer' name='num_of_employees' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='task1_exercise1 (2)' inline='true' name='federated.0wocd6v086zowh14xynyq1i45n3p' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='task1_exercise1' name='textscan.0ncvq7u0xol52g1bnpen513ek3h7'>
+            <connection class='textscan' directory='D:/_DA+DS/02_SQL/sql-mysql-for-data-analytics-and-business-intelligence/all_queries/Ch23' filename='task1_exercise1.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ncvq7u0xol52g1bnpen513ek3h7' name='task1_exercise1.csv' table='[task1_exercise1#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='jan_1_1998' ordinal='0' />
+            <column datatype='string' name='gender' ordinal='1' />
+            <column datatype='integer' name='num_of_employees' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[task1_exercise1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>jan_1_1998</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[jan_1_1998]</local-name>
+            <parent-name>[task1_exercise1.csv]</parent-name>
+            <remote-alias>jan_1_1998</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[task1_exercise1.csv_9F4CF28210FF4A598951578F342175AB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[task1_exercise1.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[task1_exercise1.csv_9F4CF28210FF4A598951578F342175AB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_of_employees</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_of_employees]</local-name>
+            <parent-name>[task1_exercise1.csv]</parent-name>
+            <remote-alias>num_of_employees</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[task1_exercise1.csv_9F4CF28210FF4A598951578F342175AB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='task1_exercise1.csv' datatype='table' name='[__tableau_internal_object_id__].[task1_exercise1.csv_9F4CF28210FF4A598951578F342175AB]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Jan 1 1998' datatype='string' name='[jan_1_1998]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;before&quot;' value='Before the year 1998' />
+          <alias key='&quot;on or after&quot;' value='On or after the year 1998' />
+        </aliases>
+      </column>
+      <column caption='Num Of Employees' datatype='integer' name='[num_of_employees]' role='measure' type='quantitative' />
+      <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/pcslg/AppData/Local/Temp/TableauTemp/#TableauTemp_0m9laig0p21g5s17dhinq0x4riy7.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/02/2025 04:03:37 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>jan_1_1998</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[jan_1_1998]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>jan_1_1998</remote-alias>
+              <ordinal>0</ordinal>
+              <family>task1_exercise1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[task1_exercise1.csv_9F4CF28210FF4A598951578F342175AB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>1</ordinal>
+              <family>task1_exercise1.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[task1_exercise1.csv_9F4CF28210FF4A598951578F342175AB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_of_employees</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_of_employees]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_of_employees</remote-alias>
+              <ordinal>2</ordinal>
+              <family>task1_exercise1.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[task1_exercise1.csv_9F4CF28210FF4A598951578F342175AB]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:gender:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;M&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;F&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='task1_exercise1.csv' id='task1_exercise1.csv_9F4CF28210FF4A598951578F342175AB'>
+            <properties context=''>
+              <relation connection='textscan.0ncvq7u0xol52g1bnpen513ek3h7' name='task1_exercise1.csv' table='[task1_exercise1#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='jan_1_1998' ordinal='0' />
+                  <column datatype='string' name='gender' ordinal='1' />
+                  <column datatype='integer' name='num_of_employees' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Semibold'>Task 1 - Exercise </run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run fontcolor='#555555' fontname='Tableau Regular' fontsize='11'>Number of employees who have signed their contracts before and on or after January 1, 1998.  Color shows details about Gender.  The marks are labeled by % of Total Num Of Employees.  Details are shown for Gender.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='task1_exercise1 (2)' name='federated.0wocd6v086zowh14xynyq1i45n3p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0wocd6v086zowh14xynyq1i45n3p'>
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column caption='Jan 1 1998' datatype='string' name='[jan_1_1998]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;before&quot;' value='Before the year 1998' />
+                <alias key='&quot;on or after&quot;' value='On or after the year 1998' />
+              </aliases>
+            </column>
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[jan_1_1998]' derivation='None' name='[none:jan_1_1998:nk]' pivot='key' type='nominal' />
+            <column caption='Num Of Employees' datatype='integer' name='[num_of_employees]' role='measure' type='quantitative' />
+            <column-instance column='[num_of_employees]' derivation='Sum' name='[pcto:sum:num_of_employees:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[num_of_employees]' derivation='Sum' name='[sum:num_of_employees:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0wocd6v086zowh14xynyq1i45n3p].[none:gender:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0wocd6v086zowh14xynyq1i45n3p].[sum:num_of_employees:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0wocd6v086zowh14xynyq1i45n3p].[none:jan_1_1998:nk]' value='208' />
+            <format attr='width' field='[federated.0wocd6v086zowh14xynyq1i45n3p].[none:gender:nk]' value='229' />
+            <format attr='text-format' data-class='subtotal' field='[federated.0wocd6v086zowh14xynyq1i45n3p].[pcto:sum:num_of_employees:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0wocd6v086zowh14xynyq1i45n3p].[none:jan_1_1998:nk]' value='bold' />
+            <format attr='font-size' field='[federated.0wocd6v086zowh14xynyq1i45n3p].[none:jan_1_1998:nk]' value='10' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0wocd6v086zowh14xynyq1i45n3p].[none:gender:nk]' />
+              <text column='[federated.0wocd6v086zowh14xynyq1i45n3p].[pcto:sum:num_of_employees:qk]' />
+              <lod column='[federated.0wocd6v086zowh14xynyq1i45n3p].[none:gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.4832596778869629' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0wocd6v086zowh14xynyq1i45n3p].[sum:num_of_employees:qk]</rows>
+        <cols>([federated.0wocd6v086zowh14xynyq1i45n3p].[none:jan_1_1998:nk] / [federated.0wocd6v086zowh14xynyq1i45n3p].[none:gender:nk])</cols>
+      </table>
+      <simple-id uuid='{18B4A370-2752-4767-94F0-494091621189}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0wocd6v086zowh14xynyq1i45n3p].[none:gender:nk]' type='color' />
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='91'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.06738a61m5cm9316n2g2r1bszqk2].[none:gender:nk]</field>
+            <field>[federated.06738a61m5cm9316n2g2r1bszqk2].[none:jan_1_1998:nk]</field>
+            <field>[federated.0wocd6v086zowh14xynyq1i45n3p].[none:gender:nk]</field>
+            <field>[federated.0wocd6v086zowh14xynyq1i45n3p].[none:jan_1_1998:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DAAB6F36-9DA4-46A2-9BFC-407E554F1575}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
