@@ -312,18 +312,273 @@
         </objects>
       </object-graph>
     </datasource>
+    <datasource caption='task2_exercise' inline='true' name='federated.0chsfpq1ice80l1fuyv2410qrhjk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='task2_exercise' name='textscan.1g1mdb31ujtjk512100kf1fbsaqk'>
+            <connection class='textscan' directory='D:/_DA+DS/02_SQL/sql-mysql-for-data-analytics-and-business-intelligence/all_queries/Ch24' filename='task2_exercise.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1g1mdb31ujtjk512100kf1fbsaqk' name='task2_exercise.csv' table='[task2_exercise#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='dept_name' ordinal='0' />
+            <column datatype='string' name='gender' ordinal='1' />
+            <column datatype='integer' name='emp_no' ordinal='2' />
+            <column datatype='date' name='from_date' ordinal='3' />
+            <column datatype='date' name='to_date' ordinal='4' />
+            <column datatype='integer' name='currently_active' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[task2_exercise.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dept_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dept_name]</local-name>
+            <parent-name>[task2_exercise.csv]</parent-name>
+            <remote-alias>dept_name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[task2_exercise.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>emp_no</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[emp_no]</local-name>
+            <parent-name>[task2_exercise.csv]</parent-name>
+            <remote-alias>emp_no</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>from_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[from_date]</local-name>
+            <parent-name>[task2_exercise.csv]</parent-name>
+            <remote-alias>from_date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>to_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[to_date]</local-name>
+            <parent-name>[task2_exercise.csv]</parent-name>
+            <remote-alias>to_date</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currently_active</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[currently_active]</local-name>
+            <parent-name>[task2_exercise.csv]</parent-name>
+            <remote-alias>currently_active</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='task2_exercise.csv' datatype='table' name='[__tableau_internal_object_id__].[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]' role='measure' type='quantitative' />
+      <column caption='Currently Active' datatype='integer' name='[currently_active]' role='measure' type='quantitative' />
+      <column caption='Dept Name' datatype='string' name='[dept_name]' role='dimension' type='nominal' />
+      <column caption='Emp No' datatype='integer' name='[emp_no]' role='measure' type='quantitative' />
+      <column caption='From Date' datatype='date' name='[from_date]' role='dimension' type='ordinal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='To Date' datatype='date' name='[to_date]' role='dimension' type='ordinal' />
+      <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/pcslg/AppData/Local/Temp/TableauTemp/#TableauTemp_1ifvhyc1tqtwll19u9zb20cu6kjk.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/03/2025 06:25:53 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>dept_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dept_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dept_name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>task2_exercise.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>1</ordinal>
+              <family>task2_exercise.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>emp_no</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[emp_no]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>emp_no</remote-alias>
+              <ordinal>2</ordinal>
+              <family>task2_exercise.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15630</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>from_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[from_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>from_date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>task2_exercise.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>to_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[to_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>to_date</remote-alias>
+              <ordinal>4</ordinal>
+              <family>task2_exercise.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>currently_active</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[currently_active]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>currently_active</remote-alias>
+              <ordinal>5</ordinal>
+              <family>task2_exercise.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:gender:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;M&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;F&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='task2_exercise.csv' id='task2_exercise.csv_3B3A30AB326C423EA8A9BD2E67CDF4CB'>
+            <properties context=''>
+              <relation connection='textscan.1g1mdb31ujtjk512100kf1fbsaqk' name='task2_exercise.csv' table='[task2_exercise#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='dept_name' ordinal='0' />
+                  <column datatype='string' name='gender' ordinal='1' />
+                  <column datatype='integer' name='emp_no' ordinal='2' />
+                  <column datatype='date' name='from_date' ordinal='3' />
+                  <column datatype='date' name='to_date' ordinal='4' />
+                  <column datatype='integer' name='currently_active' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
   </datasources>
   <worksheets>
     <worksheet name='Sheet 1'>
       <layout-options>
         <title>
           <formatted-text>
-            <run bold='true'>Task 2 - Comparision of male and female managers</run>
+            <run bold='true'>Task 2 - Comparision of male and female managers who are active</run>
           </formatted-text>
         </title>
         <caption>
           <formatted-text>
-            <run fontsize='11'>The plot of  Active employees number for Calendar Year.  Color shows details about Gender.  Details are shown for Gender. The data is filtered on Dept Name, which keeps 9 of 9 departments.</run>
+            <run fontsize='11'>The plot of  Active manager number for Calendar Year.  Color shows details about Gender.  Details are shown for Gender. The data is filtered on Dept Name, which keeps 9 of 9 departments.</run>
           </formatted-text>
         </caption>
       </layout-options>
@@ -368,8 +623,75 @@
       </table>
       <simple-id uuid='{F9708C75-4F85-473E-8068-B6EA02A48528}' />
     </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Task 2 - Exercise: Comparision of male and female employees who are currently active</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run fontsize='11'>The plot of  Active employees number for Calendar Year.  Color shows details about Gender.  Details are shown for Gender. The data is filtered on Dept Name, which keeps 9 of 9 departments.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='task2_exercise' name='federated.0chsfpq1ice80l1fuyv2410qrhjk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0chsfpq1ice80l1fuyv2410qrhjk'>
+            <column caption='Currently Active' datatype='integer' name='[currently_active]' role='measure' type='quantitative' />
+            <column caption='Dept Name' datatype='string' name='[dept_name]' role='dimension' type='nominal' />
+            <column caption='From Date' datatype='date' name='[from_date]' role='dimension' type='ordinal' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[dept_name]' derivation='None' name='[none:dept_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[currently_active]' derivation='Sum' name='[sum:currently_active:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[from_date]' derivation='Year-Trunc' name='[tyr:from_date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0chsfpq1ice80l1fuyv2410qrhjk].[none:dept_name:nk]'>
+            <groupfilter function='level-members' level='[none:dept_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0chsfpq1ice80l1fuyv2410qrhjk].[none:dept_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0chsfpq1ice80l1fuyv2410qrhjk].[tyr:from_date:qk]' scope='cols' value='Year' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0chsfpq1ice80l1fuyv2410qrhjk].[tyr:from_date:qk]' value='182' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.0chsfpq1ice80l1fuyv2410qrhjk].[none:gender:nk]' />
+              <lod column='[federated.0chsfpq1ice80l1fuyv2410qrhjk].[none:gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0chsfpq1ice80l1fuyv2410qrhjk].[sum:currently_active:qk]</rows>
+        <cols>[federated.0chsfpq1ice80l1fuyv2410qrhjk].[tyr:from_date:qk]</cols>
+      </table>
+      <simple-id uuid='{AB4E7CE8-CE5D-4AA9-9F1D-4C1BE028A42F}' />
+    </worksheet>
   </worksheets>
-  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+  <windows saved-dpi-scale-factor='1.25' source-height='63'>
     <window class='worksheet' maximized='true' name='Sheet 1'>
       <cards>
         <edge name='left'>
@@ -411,6 +733,50 @@
         </highlight>
       </viewpoint>
       <simple-id uuid='{7B4AF9C8-3BC0-4F72-8AB1-2A4F7511A0D3}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0chsfpq1ice80l1fuyv2410qrhjk].[none:dept_name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0chsfpq1ice80l1fuyv2410qrhjk].[none:gender:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='92'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0chsfpq1ice80l1fuyv2410qrhjk].[none:dept_name:nk]</field>
+            <field>[federated.0chsfpq1ice80l1fuyv2410qrhjk].[none:gender:nk]</field>
+            <field>[federated.0chsfpq1ice80l1fuyv2410qrhjk].[yr:from_date:ok]</field>
+            <field>[federated.1ouyga71u5uqbz13vw4tn1ptkmsv].[none:calendar_year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{272F83C6-4EBD-42BC-90F7-3F110EB3CE04}' />
     </window>
   </windows>
   <thumbnails>
@@ -539,6 +905,100 @@
       Crksw0PDZHOF0rMx4eonH+EPNFAsFLhy7SqNTc1gFQl2DDIyWJ2086ZRhOYB2n0FtQyqcDdq
       GVThapQAFK5GCUDhapQAFK5GCUDhapQAFK5GCUDhapQAFK5GCUDhapQAFK5GCUDhav4/2wI5
       JmZp2KsAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAATAElEQVR4nO3d2W9UaXrH8e8pV9ku7/sOBkMzQLM322QmPaOJMos0V3MVaSJNcpH/Ihd9
+      kev8A7mKRslEiWYUJYq6NT00S7tpwAtgG2iDjW1cripXufb9bG8uDDQ94Cqwq8qFz/ORWmpB
+      2edx9/s75z2vz/scTSmlEMKhXLtdgBC7qaoBkIuNqDVVDYBlWdU8nBAlyRRIOJoEQDiaBEA4
+      mgRAOJoEQDiaBEA4mgRAOJoEQDiaBEA4mgRAOJoEQDiaBEA4mgRAOJoEQDiaBEA4mgRAOJoE
+      QDjaDgOgiId8pAoKlM3q4iNmv3mKbdskEglQBqFwrDyVClEBOwpANh7m4f07rGegkEngbhuk
+      vzHDgi+Gzx9g8cEMhruhXLUKUXbunXxxU0cfx8ZGiAANLZ206us8DOt8eKqVr6/eoL5jjL/s
+      aMK2bWzbxrIs2RgvasqOAvAqPR1hfjXCmbNn8WgWg6NHIZtkI52nt7URl2vzYuN2l+2QQuzY
+      jqZA8fVVHq1l8H8zRTieIp9OcHd6mljWoLuri2OnT5OORpBzvqhVWjU7w5mmKVcAUVNkGVQ4
+      mgRAOJoEQDiaBEA4mgRAOJoEQDiaBEA4mgRAOJoEQDiaBEA4mgRAOJoEQDiaBEA4mgRAOJoE
+      QDiaBEA4mgRAOJoEQDiaBEA42o4CoGeTjH/2e1biCiuf5Ob4OONf3SarGzxZXCQTXePhor9c
+      tQpRdjvaFG8UcsRWZkj2XKQ58RjVNkKzGSCU7yAdW8HIm5y+cIF6lwZsboqvq6srW/FC7NSO
+      WjR4Grx46jYHtw146ly48KBsm1R8A62+B7emoZR6+Y9t2+WoW4iy2FEAkht+HjxZIdXSyOVj
+      /czNToOyOXX+IkZ+lOHORmYer3Dm6AFcgFJK2qKImrKjKZBtmRimBWh46j3YlonChbvOhVIK
+      l0vDsmxcdXVoSF8gUXukMZZwNFkGFY4mARCOJgEQjiYBEI4mARCOJgEQjiYBEI4mARCOJgEQ
+      jiYBEI4mARCOJgEQjiYBEI4mARCOVjIAG74n/PHGHYKrq+jyxmuxx5QMwJ27cxQyIXL+WZbj
+      1ShJiOopGYCBDi8PZ2b534k1htqqUZIQ1VNye1a+oHP5459y5uRxmqWhg9hjSl4BLn3813TU
+      pfnnf/pHVhJFPqgUtmVh2fbLDhAohW3LjYOoXSX3BI9/9l8sbFhcuPxDjh8eQdvic6kNH9OP
+      lnEpgw9OXiQSXGWw3Y0/28SJw0OA7AkWtafoaLxx5VPSOYNCJsVXX3xK7+A/0Nf85s9qaHib
+      WnBbOTRNIxZeI5Ho4NLFQ9jPrwq2bWOaZiV+DiG2pWgALvzFj0inUvyw0YuRz9LUsPVns7ks
+      rZ3deM0Y2UwOb0sLRs7AsBUNz5tnaZqGyyW/ehC1o2gAlJHni6t/4vLlH7Jyb5zhH/+aQ+1v
+      /myj10tk5RkaNoePH8Ro62ZkrJX5hRVOHT2IS9OwbVsCIGpK0XuA4PIj/vB/Vzgwdoi2nhG+
+      f+EkO1kIknsAUWuKno4HDhzjxInj/Oznv2BAhQlkqlWWENVRcj5iJtf59LM/cuPeEs2eapQk
+      RPWUXAa1TJ211RVCoQ0On/o+Hd7tH0ymQKLWFB2N8/duMnnvEc9WFhm7+EtOyBVA7DFFp0D3
+      Jr/Gbuzg5NExTp49T4OcvMUeU3IKlE1GuH93ioWVAD/91W/ob9n+wWQKJGqNtEcXjlZyFWjq
+      62ssrK5TvZgIUT0lrwDJ6Dp3J25xe2aBM5d/zE9+cA63a6tH4oqTK4CoNSWvAHMTN1hcz/CT
+      n/2SYXeUlZhejbqEqIqiV4C7X19hKZDA6/WiaRqXf/xzOhq3fzC5AohaU3IKFA6H6O3tIxvb
+      gNYemnYwfiUAotYUnQJt+Bb43e/+jWvXrvE/f/hPwrlqlSVEdRQNQENTK6MjQ1iWzeGPPmag
+      qVplCVEdRQPQ2tWPZqRJJBOsLi+QkftfsceUnJB73I109PXh1jQ8spdF7DElA/Dh6bNsJPOb
+      2xm3t/wvRM0qeU6PBFeZeLhEqzIoSADEHlMyAIF4juEuD6HVeaLZapQkRPWUDMCB/i5ikRjx
+      tg8YK9Ia0TZyTN2+xZ3JaTJ5g8cLC6QjqzxY9JezXiHKquQ9QNC/xqnv/xUH+9qwFVveB0TW
+      lslYGi2NjbhdilQyxoMNxdkL5192invRG0iIWlEyAI1NjUze+CMz9fX84ld/S88WvwswDJP+
+      /Yfpdyd4+ixMLh0HdycuTZMAiJpVMgA5vY6/+c3f01xX/A64d3iYx3dmiXhcHDhyGtvYx0iX
+      l5n5Zc4eO4gLUErJoxCippR8FujK7/+F20+z7B/s4ee/+vWWVwBgswUi4NJedIID21ZoLhca
+      8iyQqC1K2W8xBWrtZqjXg2malNoT86auby755YGoUUZi6i1+EfbRDzjwocnS7BSWjGWxR9hG
+      DCN2q3QApr/6nEerCfJ5gyM/qkZpQlSWUjb6xjVQVvF7gLVVHwMjI9RpEHj2jO59+6nfwVVA
+      7gFELTDSjyiEPkPTXMV/ETb7cOblun/eP8uSvCRPvOdsM4MeuY6mbQ79oqfjbo/Bv/72P2jz
+      utjIaPzdparUKETF6NEvUVbuZQCKToGUsklEoxRMRWd3F/Xunb0lT6ZAYjeZ2WXywf9G076d
+      xxcdjZrmoqO7p+KFCVFpyjbRN7547c9li4vY85RSGPFb2GbiO2d/kAAIB1B6BD0++XLe/yoJ
+      gNjTlLIobHy+5et9JQBiTzOTM1iF4OaDaW8gARB7lm0k0GNfv3Hq84IEQOxJSin0yHWwi/fy
+      kQCIPcnKPMHMLm459XlBAiD2HGXlKUSuFp36vCABEHvOi8cd3oYEQOwpVn4NIzX32i+8tiIB
+      EHuGsg0KG3+CLVf9X1fWACizwMP5RZRtE43FUXaB4HqknIcQ4o2UUhiJKWw9+tZnfyhzAJYX
+      5llc9YOyCASDLMzNohqkp7qoPGXEMOJ33urG91VlezY5Gw+Sc3fS114AILDyCE/7GB+3e7Ft
+      G9u2sSyLKr6VVTiFstFDn2Pb1jt/adkCkElnSGyEWVpeZmB4lMHRo9TlU6wncwy0e192jJD9
+      AKLcjOQsSve/sStJKWV/UbZvbY3hwQHCkSg9XW2s+iPs3zckfYFERdhmmpzvt6C29/YWeVO8
+      eG8ppSiEPsXMPH6nG99XyTKoeE8prNwKZmZ+24MfJADiPaVsc/M5/3dc9flzEgDx3lFKocdu
+      oszMjr6PZVnlWwUSolpsPYSRuLujqY9pWtxa6ZYAiPfLZneHKzsa/IZp8fVKL4vJIxIA8X4x
+      U5tbHDVtez2qdMPk5soAS6kPQNMkAOL9sbnF8ea2B39BN/hyeYTV7KGXz8tJAMT7QSkKG1dQ
+      trmt6U+uYHB9eZRAbvQ7fy4BEO8FMzOPlVvZ1rJnJm9yfekg64V9/Pmj0hIAUfM2tzhe29aZ
+      P5Uzub58kHBh3xv/XgIgappS6vkWx/w7ByCZNbm2fIiIPrzlZyQAoqbZBf/zLY7vNvVJZE2+
+      eHqEuDlQ9HMSAFGzlG1QCL/74w7xjMnnT4+Ttkp3NpcAiJplxCewjdhbB0ApRTxj8fnSCTJm
+      51ttDZYAiJpkFcIYial3GvwbKYurK6fIWB1vvS9eAiBqjlI2euQqSllvdeOrlGI9YXN99TRZ
+      q/2djiUBEDXHTM1h5dfe6uyvlMIfU3zpO03ObnvnY0kARE2xzTR6dPytpz6rEcWXa2fQVcu2
+      jicBEDVFj1xF2XrJqY9SiqWwxs3AOQy1/dY7ZdsQY+k5Hs7cZWL6PjndILi+jlVIsewLlesQ
+      Yo8zM08xMwtvNfgXQy7G/Tsb/FDGTfGGnqNgusiGFki4B9FT66hsiuFjZ+hsqgdkU7zYmrIL
+      5Hy/xTbTRQOglOJJyM2twBksGnZ83LKNRo+nkWhwEV/CxanjrVyfu46n/SAfej3SGEuUZMTG
+      sfQkaNqWY0QpxeNQPbcDp7HwAPaOj1u+xljRAMGcm7Mnx0BZDI4eo1llWQmnGO1rwy2NscQW
+      rEIQOz2Lq27r5/yVsnkUbGAydBbl8pRt7l62ewDN7cFIhJicuksiazIyPMSB42doolCuQ4g9
+      SNkmerj4Fkfbtrnva2Qi9BE2nrIeXxpjiV2lxyeKLntats291SZmY6dRbG8nWDEyGsWusY0Y
+      Rvz2loPftCymV9t4GD9RkcEPEgCxS5RSFDaubrnF0TAtJlc7mU8cq9jgBwmA2AVKKawiWxxN
+      y+L2SjdPUkepdO82CYCoPqVT2Phii8FvMv60n6X0kZKvOC0HCYCoqs2pz7U3Pu5gmCY3ng7x
+      LHOoKoMfJACiyuy8DzP94LXePnndZHx5mNXsWNUGP0gARBUp+8XU57uDP1swGV/ex1ruYNVr
+      kgCIKlEY8UlsI/qduX8mb3JjeZRgfrTI11aOBEBUha1HMBKT3xn86ZzBtaVDhPWRXatLAiAq
+      Til78wXWyn45v09mDa48PULcHNzV2iQAouLM5AxWPvDy7J/ImPxp6RhJs3eXK5MAiAqzzTR6
+      7KuXgz+WtriyfIxUDQx+kACIClJKPd/iaAAQTVt8sfwhaat7lyv7lgRAVIyVW8LMPAFc3+3Z
+      U0MkAKIilF2gEL6CptURjJtce3ZmW21LKq1sATAyUb6enEOhce7SJVaXlxjqqMeXrufE4a27
+      84q9SY9+hbLS+GOK66vnKGyzbUmllS0A4VCYI6fO02SuEwgmSETXScSbuHDxo3IdQrwnrPwa
+      RnKWZxGN8bWz6Kp5t0vaUlmfNVVKgVJoaNS5XSjbxpJN8I6y+QLrqyyFYXztTE0PfihjAPr6
+      +1mcm+LefIDBgTbaOvo4/b0RHj1eQSLgHEZimse+KF8FavvM/4LsCRZlYxtx7k/9O7cCp8rS
+      s6caqhIA27Y3dwFZFnVFWl+8i2h4HqV23hdGlE82tcaEr6/snRsqqSoBePUQtm3jet4j6NVA
+      lPp3pRRKKVwuF5Zl4XK50DSt5Ne9erw//x5ve7xy1Fzt77GT4wFomvZe/tzFxsybPlvVKVC5
+      vBqA3a6jXFc0qWN36ngvAyBEuVR2y70QNa7uk08++WS3i9iSsng0fZO41k5nI9y/O8Xisp++
+      oSEW56Z48nQZrbGNmG+BbxaXSBsuejpby16GnokzfnuK/qER8vEAd2fm2Ega9LS6uDNxF18g
+      RHdfP/7Fh8wvLNHc2Y+3vvxTgc06JukfHKEQDzA984CNZIGeVjcTE9P4AiHaWr3M3pthdWWB
+      uNlMX2eZlyKVIry2xOyin5HBXpbn5/jm8QI0dlKI+Zh5ME8sY9Lq1pmYnsW/kWBooLf801Wl
+      CPtfr0M1dmLEfdx/ME80Y9JaV2D6/hyheI6B3u7XthvX9BXAKuTo7u0hk9dJRNZoHfge54/3
+      Mjf/jFgazp38gIA/hD8UoqOji/3D/RWpI2coOlvrMS3F0nKQcxcvo+LrrAfX6Bg9xnCHm4Df
+      z2o4RWd3Hy3eyiz15g1FV2sDhq14uhzk3MVLqESI9aCP9v1HGe7wEC94OH/pIj3t7QwNdpW9
+      BgXUNXWgmRkw02zkGrh46QKrTx/jD4Q5de48+ViI4JqP/R+eo1HPkLPKP8tWQJ331TrquXTp
+      Ar6n86wFwpw8dx49FmJ+yc/Zi5eoz8VImdZr36emA1DX2EJ7Uz0aGi3tPYRXHjD75BlGVset
+      5Zmemae1rYWzH11ioLeDqTtTZWiY/br2jk48dZv/qQb7Wpm4fQe/fwNXWyfhpYeshNLU1+ko
+      muhu0Zh9uFSBKqDtTXX4Xq0jRYvXg23miRseOhvL/79X0zS6uro2z6R1TXjtOJPTd0mkC7S3
+      NnF/ehJV30RLewdLc9MkDHBXYLHitTpUgjvT90ikvq3D8jSxr7+dyVt38PlC6G+43a3pAJh6
+      nkgsQTIexVD1HBg7SLOnkdGDXWSNeg4eGCEe3SAUXKegG2iuSvw4imwqQSKZJBaP423r4dDB
+      /XTuG8KOROjsH6G3rYGC7UUjg26YuN2VWAd/pY5YHG/78zr2D6GiEToGRuhrbySeyuJffMzg
+      2AcVWSVTyiYWCZNKpUhmCgyM7GO4r5uhkSGi8RQHxsZQ2STroSiDowdoRidjlv+09GodiUyB
+      geH9jPR1MTgyRDS2WQe5JO7Wbg4dGqVjaIAO9+vT0ppeBdKzSXyBMAroHRgmGwuhedvp724n
+      HY+wkcgyODyEKqQJhGIMDO+rwNxbEQsHiSaz1Hka6O/tZD0YpndwmOaGOtb9Pix3M4N93eQz
+      cdajWfbtG6Su7IPv2zpcngYG3lCH6W5mqK+LdCZNa0v574UAlLLwLS+j29Dc3k2TSyeWsRgZ
+      GUQZOdbWgrT3DtDmdRNYW8PT0kVvZ1vZW/28WkdTexfNLoNYxmRkZGizDn+Q9p4BWuoVvrV1
+      egZGaPG+fmKq6QAIUWk1PQUSotIkAMLRJADC0SQAwtEkAMLRJADC0SQAwtEkAMLRJADC0SQA
+      wtEkAMLR/h+IEswBPVattAAAAABJRU5ErkJggg==
     </thumbnail>
   </thumbnails>
 </workbook>
