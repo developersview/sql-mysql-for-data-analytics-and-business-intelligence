@@ -1,0 +1,37 @@
+gender,dept_name,avg_salary,jan_1_1998
+M,Marketing,69651.71,"on or after"
+F,Marketing,68423.89,"on or after"
+F,Marketing,69839.08,before
+M,Marketing,69907.59,before
+F,Finance,67911.61,before
+M,Finance,67613.21,before
+M,Finance,59365.64,"on or after"
+F,Finance,60489.38,"on or after"
+M,"Human Resources",52857.76,before
+M,"Human Resources",52676.63,"on or after"
+F,"Human Resources",52969.80,before
+F,"Human Resources",53898.81,"on or after"
+F,Production,57260.75,before
+M,Production,57358.76,before
+F,Production,54196.04,"on or after"
+M,Production,54659.13,"on or after"
+F,Development,56932.55,before
+M,Development,52656.24,"on or after"
+M,Development,57160.71,before
+F,Development,52633.49,"on or after"
+F,"Quality Management",54436.21,"on or after"
+M,"Quality Management",53952.54,"on or after"
+M,"Quality Management",55762.92,before
+F,"Quality Management",55313.21,before
+F,Sales,71925.02,"on or after"
+F,Sales,78229.55,before
+M,Sales,73348.35,"on or after"
+M,Sales,78587.76,before
+M,Research,57978.64,before
+M,Research,57077.21,"on or after"
+F,Research,56393.53,"on or after"
+F,Research,57574.17,before
+M,"Customer Service",62945.13,"on or after"
+F,"Customer Service",62664.58,"on or after"
+M,"Customer Service",57069.24,before
+F,"Customer Service",57950.85,before
